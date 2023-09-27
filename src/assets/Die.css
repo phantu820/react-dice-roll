@@ -1,0 +1,41 @@
+/* Die.css File */
+/* Styling each Die */
+.Die {
+    font-size: 10em;
+    padding: 0.25em;
+    color: rgb(7, 229, 245);
+}
+
+/* Applying Animation */
+.Die-shaking {
+    animation-name: wobble;
+    animation-duration: 1s;
+}
+
+/* Setting Animation effect to the
+	dice using css keyframe */
+@keyframes wobble {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    20% {
+        transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    }
+
+    40% {
+        transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    }
+
+    60% {
+        transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    }
+
+    80% {
+        transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
